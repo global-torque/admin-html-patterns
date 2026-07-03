@@ -1,0 +1,48 @@
+{
+  "name": "@global-torque/admin-html-patterns",
+  "private": false,
+  "version": "0.0.0",
+  "license": "MIT",
+  "type": "module",
+  "scripts": {
+    "build": "tsc -p tsconfig.build.json",
+    "prepack": "npm run build",
+    "typecheck": "tsc --noEmit -p tsconfig.json"
+  },
+  "devDependencies": {
+    "@types/node": "^25.5.0",
+    "typescript": "^6.0.2"
+  },
+  "publishConfig": {
+    "access": "public"
+  },
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/global-torque/admin-html-patterns.git"
+  },
+  "homepage": "https://github.com/global-torque/admin-html-patterns#readme",
+  "bugs": {
+    "url": "https://github.com/global-torque/admin-html-patterns/issues"
+  },
+  "files": [
+    "dist",
+    "README.md",
+    "LICENSE",
+    "NOTICE.md",
+    "CHANGELOG.md",
+    "SECURITY.md"
+  ],
+  "main": "./dist/index.js",
+  "types": "./dist/index.d.ts",
+  "exports": {
+    ".": {
+      "types": "./dist/index.d.ts",
+      "import": "./dist/index.js"
+    },
+    "./patterns": {
+      "types": "./dist/patterns.d.ts",
+      "import": "./dist/patterns.js"
+    }
+  },
+  "packageManager": "pnpm@10.33.0"
+}
